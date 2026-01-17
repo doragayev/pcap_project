@@ -107,6 +107,13 @@ curl http://localhost:9100/metrics
 }
 ```
 
+## בדיקות יחידה
+
+```bash
+python3 test_pcap_analyzer.py
+# או: python test_pcap_analyzer.py
+```
+
 ## מבנה הפרויקט
 
 ```
@@ -115,6 +122,7 @@ curl http://localhost:9100/metrics
 ├── pcap_reader.py       # קריאת וניתוח PCAP
 ├── elastic_writer.py    # כתיבה ל-Elasticsearch (עם retry logic)
 ├── metrics.py           # מטריקות Prometheus
+├── test_pcap_analyzer.py # בדיקות יחידה
 ├── requirements.txt     # תלויות Python
 ├── docker-compose.yml   # Elasticsearch + Kibana
 └── samples/            # קבצי PCAP לדוגמה
